@@ -8,13 +8,20 @@ Volumen_bañera_2_horas=200*2
 
 agua_bañera = int(input("Agregar agua a la bañera:"))
 
-while bañera_capacidad > 499:
-    print("la bañera no está llena!")
-    agua_bañera = int(input(f"Agregar más agua a la bañera, usted tiene {input} litros"))
-if bañera_capacidad == 500:
-  print(f"Bañera llena, con {str(bañera_capacidad)} litros")
-else :
-   print(f"bañera desbordada, con {str(agua_bañera)} - {str(bañera_capacidad)}")
-  
+while agua_bañera < bañera_capacidad:
+    print(f"La bañera no está llena, usted tiene {agua_bañera} litros")
+
+    agua_bañera = agua_bañera + int(input("agregue mas agua:"))
+
+    if agua_bañera > bañera_capacidad:        
+        
+        Agua_rebosada = agua_bañera - 500        
+        print(f"La bañera se llenó con 500 litros, desbordó {int(Agua_rebosada)} litros ")
+else:
+  print("La bañera está llena con 500 litros")        
+
+
+
+
     
       
